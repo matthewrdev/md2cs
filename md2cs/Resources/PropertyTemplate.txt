@@ -1,0 +1,6 @@
+﻿        /// <summary>
+        /// $name$ unicode value ("\u$code$").
+        /// <para/>
+        /// See $link$
+        /// </summary>
+        public const string $dotnet_name$ = "\u$code$";
