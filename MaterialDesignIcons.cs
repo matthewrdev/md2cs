@@ -3,7 +3,7 @@ using System;
 namespace MaterialDesign
 {
     /// <summary>
-    /// The unicode values for all Material Design Icons icons.
+    /// The unicode values for all Material Design icons.
     /// <para/>
     /// See https://material.io/resources/icons/
     /// <para/>
