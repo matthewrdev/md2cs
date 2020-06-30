@@ -26,9 +26,7 @@ The end result is cleaner, more readable and more maintainable code.
 
 It's super easy to use MaterialDesign To C#.
 
-Simply download [MaterialDesignIcons.cs](MaterialDesignIcons.cs) and place it into your project:
-
-![Placing MaterialDesignIcons.cs inside a C# project](img/usage.png)
+Simply download [MaterialDesignIcons.cs](MaterialDesignIcons.cs) and place it into your project to start using it.
 
 **Ensure that you have added the Material Design font file into your projects!**
 
