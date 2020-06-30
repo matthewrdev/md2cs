@@ -11,13 +11,13 @@ Use MaterialDesign To C# to replace confusing and arcane unicode strings with a 
 This:
 
 ```
-submitButton.Text = "/uf00c"; // Huh? What icon is this? What font is it from? 😭
+submitButton.Text = "/ue869"; // Huh? What icon is this? What font is it from? 😭
 ```
 
 Becomes this:
 
 ```
-submitButton.Text = MaterialDesignIcons.Check; // Obviously a check icon from MaterialDesign! 😊👍
+submitButton.Text = MaterialDesignIcons.Build; // Obviously a build icon from MaterialDesign! 😊👍
 ```
 
 The end result is cleaner, more readable and more maintainable code.
@@ -35,19 +35,16 @@ Simply download [MaterialDesignIcons.cs](MaterialDesignIcons.cs) and place it in
 You can use an icon in C# like:
 
 ```
-var fileIcon = MaterialDesignIcons.DonutSmall;
+var fileIcon = MaterialDesignIcons.Build;
 ```
 
 You can use an icon in XAML by:
 
  * Adding a namespace reference to `MaterialDesign`: `xmlns:md="clr-namespace:MaterialDesign"`;
- * Referencing a icon using `x:Static`: `<Label Text="{x:Static md:MaterialDesignIcons.Alicorn}"/>`
+ * Referencing a icon using `x:Static`: `<Label Text="{x:Static md:MaterialDesignIcons.Build}"/>`
 
 Voila! All done!
 
-# Credits
+# Using FontAwesome?
 
- * [Material Design](https://material.io/resources/icons/?style=baseline): The amazing Material Design icon set.
- * [HtmlAgility Pack](https://html-agility-pack.net/): Used for crawling www.MaterialDesign.com 🙈
- * [QuickType](https://quicktype.io/): Used to generate a C# model to consume https://MaterialDesign.com/cheatsheet.
- * [Assembly Emitter](https://josephwoodward.co.uk/2016/12/in-memory-c-sharp-compilation-using-roslyn): Used to emit the MaterialDesign.IconCodes assembly.
+If you're using FontAwesome, [check out fa2cs](https://github.com/matthewrdev/fa2cs), a static class file containing string constants for all FontAwesome icon codes.
