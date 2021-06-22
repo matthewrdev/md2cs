@@ -11,13 +11,15 @@ Use MaterialDesign To C# to replace confusing and arcane unicode strings with a 
 This:
 
 ```
-submitButton.Text = "/ue869"; // Huh? What icon is this? What font is it from? 😭
+// Huh? What icon is this? What font is it from? 😭
+submitButton.Text = "/ue869";
 ```
 
 Becomes this:
 
 ```
-submitButton.Text = MaterialDesignIcons.Build; // Obviously a build icon from MaterialDesign! 😊👍
+// Obviously a build icon from MaterialDesign! 😊👍
+submitButton.Text = MaterialDesignIcons.Build;
 ```
 
 The end result is cleaner, more readable and more maintainable code.
