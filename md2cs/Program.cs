@@ -30,9 +30,9 @@ namespace md2cs
 
             var code = CodeWriter.Write(icons);
 
-            File.WriteAllText(Path.Combine(exportPath, "MaterialDesignIcons.cs"), code);
+            File.WriteAllText(Path.Combine(outputPath, "MaterialDesignIcons.cs"), code);
 
-            OpenFileHelper.OpenAndSelect(exportPath);
+            OpenFileHelper.OpenAndSelect(outputPath);
         }
     }
 }
