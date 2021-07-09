@@ -11,7 +11,7 @@ namespace md2cs
             Name = name;
             DotNetName = DotNetNameHelper.ToDotNetName(Name);
             Unicode = codepoint;
-            Url = "https://material.io/resources/icons/?icon=" + name;
+            Url = "https://fonts.google.com/icons?selected=Material+Icons:" + name;
         }
 
         public string Name { get; }
