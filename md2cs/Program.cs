@@ -7,7 +7,7 @@ namespace md2cs
 {
     public static class MainClass
     {
-        private const string Endpoint = "https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/codepoints";
+        private const string Endpoint = "https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints";
 
         public static async Task Main(string[] args)
         {
