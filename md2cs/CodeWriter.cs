@@ -9,7 +9,7 @@ namespace md2cs
     {
         public static string Write(IEnumerable<MaterialDesignIcon> icons)
         {
-            Console.Write("Generating C# code...");
+            Console.WriteLine("Generating C# code...");
 
             var classTemplate = ResourcesHelper.ReadResourceContent("ClassTemplate.txt");
             var propertyTemplate = ResourcesHelper.ReadResourceContent("PropertyTemplate.txt");

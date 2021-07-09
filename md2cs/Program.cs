@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using md2cs.Helpers;
@@ -27,11 +28,12 @@ namespace md2cs
             Directory.CreateDirectory(outputPath);
             
             var icons = await MaterialDesignDownloader.DownloadIconCodes(Endpoint);
-
             var code = CodeWriter.Write(icons);
-
+            
+            Console.WriteLine("Writing output file...");
             File.WriteAllText(Path.Combine(outputPath, "MaterialDesignIcons.cs"), code);
-
+            
+            Console.WriteLine("Opening output directory...");
             OpenFileHelper.OpenAndSelect(outputPath);
         }
     }
