@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Text;
 
 namespace md2cs.Helpers
@@ -61,7 +60,7 @@ namespace md2cs.Helpers
                 return input;
             }
 
-            string output = "";
+            var output = "";
 
             foreach (var s in input)
             {
@@ -82,8 +81,8 @@ namespace md2cs.Helpers
         /// <param name="s">S.</param>
         public static Stream AsStream(string s)
         {
-            MemoryStream stream = new MemoryStream();
-            StreamWriter writer = new StreamWriter(stream);
+            var stream = new MemoryStream();
+            var writer = new StreamWriter(stream);
             writer.Write(s);
             writer.Flush();
             stream.Position = 0;
@@ -98,7 +97,7 @@ namespace md2cs.Helpers
         public static string FromStream(Stream stream)
         {
             stream.Position = 0;
-            using (StreamReader reader = new StreamReader(stream, Encoding.UTF8))
+            using (var reader = new StreamReader(stream, Encoding.UTF8))
             {
                 return reader.ReadToEnd();
             }

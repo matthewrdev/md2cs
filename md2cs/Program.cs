@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using md2cs.Helpers;
 
 namespace md2cs
 {
-    class MainClass
+    public static class MainClass
     {
-        public const string Endpoint = "https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/codepoints";
+        private const string Endpoint = "https://raw.githubusercontent.com/google/material-design-icons/master/iconfont/codepoints";
 
         public static async Task Main(string[] args)
         {
@@ -27,13 +25,10 @@ namespace md2cs
             }
 
             Directory.CreateDirectory(outputPath);
+            
+            var icons = await MaterialDesignDownloader.DownloadIconCodes(Endpoint);
 
-            var downloader = new MaterialDesignDownloader();
-            var codeWriter = new CodeWriter();
-
-            var icons = await downloader.DownloadIconCodes(Endpoint);
-
-            var code = codeWriter.Write(icons);
+            var code = CodeWriter.Write(icons);
 
             File.WriteAllText(Path.Combine(exportPath, "MaterialDesignIcons.cs"), code);
 

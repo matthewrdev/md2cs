@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace md2cs.Helpers
 {
@@ -24,10 +23,10 @@ namespace md2cs.Helpers
 
             var split = name.Split('_');
 
-            string dotNetName = "";
+            var dotNetName = "";
             foreach (var s in split)
             {
-                dotNetName += StringHelper.FirstCharToUpper(s);
+                dotNetName += s.FirstCharToUpper();
             }
 
             return dotNetName;
