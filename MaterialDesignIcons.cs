@@ -18,175 +18,175 @@ namespace MaterialDesign
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:10k
         /// </summary>
-        public const string 10k = "\ue951";
+        public const string TenK = "\ue951";
 
         /// <summary>
         /// 10mp unicode value ("\ue952").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:10mp
         /// </summary>
-        public const string 10mp = "\ue952";
+        public const string TenMegaPixels = "\ue952";
 
         /// <summary>
         /// 11mp unicode value ("\ue953").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:11mp
         /// </summary>
-        public const string 11mp = "\ue953";
+        public const string ElevenMegaPixels = "\ue953";
 
         /// <summary>
         /// 12mp unicode value ("\ue954").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:12mp
         /// </summary>
-        public const string 12mp = "\ue954";
+        public const string TwelveMegaPixels = "\ue954";
 
         /// <summary>
         /// 13mp unicode value ("\ue955").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:13mp
         /// </summary>
-        public const string 13mp = "\ue955";
+        public const string ThirteenMegaPixels = "\ue955";
 
         /// <summary>
         /// 14mp unicode value ("\ue956").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:14mp
         /// </summary>
-        public const string 14mp = "\ue956";
+        public const string FourteenMegaPixels = "\ue956";
 
         /// <summary>
         /// 15mp unicode value ("\ue957").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:15mp
         /// </summary>
-        public const string 15mp = "\ue957";
+        public const string FifteenMegaPixels = "\ue957";
 
         /// <summary>
         /// 16mp unicode value ("\ue958").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:16mp
         /// </summary>
-        public const string 16mp = "\ue958";
+        public const string SixteenMegaPixels = "\ue958";
 
         /// <summary>
         /// 17mp unicode value ("\ue959").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:17mp
         /// </summary>
-        public const string 17mp = "\ue959";
+        public const string SeventeenMegaPixels = "\ue959";
 
         /// <summary>
         /// 18mp unicode value ("\ue95a").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:18mp
         /// </summary>
-        public const string 18mp = "\ue95a";
+        public const string EighteenMegaPixels = "\ue95a";
 
         /// <summary>
         /// 19mp unicode value ("\ue95b").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:19mp
         /// </summary>
-        public const string 19mp = "\ue95b";
+        public const string NineteenMegaPixels = "\ue95b";
 
         /// <summary>
         /// 1k unicode value ("\ue95c").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:1k
         /// </summary>
-        public const string 1k = "\ue95c";
+        public const string OneK = "\ue95c";
 
         /// <summary>
         /// 1k_plus unicode value ("\ue95d").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:1k_plus
         /// </summary>
-        public const string 1kPlus = "\ue95d";
+        public const string OneKPlus = "\ue95d";
 
         /// <summary>
         /// 1x_mobiledata unicode value ("\uefcd").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:1x_mobiledata
         /// </summary>
-        public const string 1xMobiledata = "\uefcd";
+        public const string OneXMobiledata = "\uefcd";
 
         /// <summary>
         /// 20mp unicode value ("\ue95e").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:20mp
         /// </summary>
-        public const string 20mp = "\ue95e";
+        public const string TwentyMegaPixels = "\ue95e";
 
         /// <summary>
         /// 21mp unicode value ("\ue95f").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:21mp
         /// </summary>
-        public const string 21mp = "\ue95f";
+        public const string TwentyOneMegaPixels = "\ue95f";
 
         /// <summary>
         /// 22mp unicode value ("\ue960").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:22mp
         /// </summary>
-        public const string 22mp = "\ue960";
+        public const string TwentyTwoMegaPixels = "\ue960";
 
         /// <summary>
         /// 23mp unicode value ("\ue961").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:23mp
         /// </summary>
-        public const string 23mp = "\ue961";
+        public const string TwentyThreeMegaPixels = "\ue961";
 
         /// <summary>
         /// 24mp unicode value ("\ue962").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:24mp
         /// </summary>
-        public const string 24mp = "\ue962";
+        public const string TwentyFourMegaPixels = "\ue962";
 
         /// <summary>
         /// 2k unicode value ("\ue963").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:2k
         /// </summary>
-        public const string 2k = "\ue963";
+        public const string TwoK = "\ue963";
 
         /// <summary>
         /// 2k_plus unicode value ("\ue964").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:2k_plus
         /// </summary>
-        public const string 2kPlus = "\ue964";
+        public const string TwoKPlus = "\ue964";
 
         /// <summary>
         /// 2mp unicode value ("\ue965").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:2mp
         /// </summary>
-        public const string 2mp = "\ue965";
+        public const string TwoMegaPixels = "\ue965";
 
         /// <summary>
         /// 30fps unicode value ("\uefce").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:30fps
         /// </summary>
-        public const string 30fps = "\uefce";
+        public const string ThirtyFps = "\uefce";
 
         /// <summary>
         /// 30fps_select unicode value ("\uefcf").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:30fps_select
         /// </summary>
-        public const string 30fpsSelect = "\uefcf";
+        public const string ThirtyFpsSelect = "\uefcf";
 
         /// <summary>
         /// 360 unicode value ("\ue577").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:360
         /// </summary>
-        public const string 360 = "\ue577";
+        public const string ThreeSixty = "\ue577";
 
         /// <summary>
         /// 3d_rotation unicode value ("\ue84d").
@@ -200,203 +200,203 @@ namespace MaterialDesign
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:3g_mobiledata
         /// </summary>
-        public const string 3gMobiledata = "\uefd0";
+        public const string ThreeGMobiledata = "\uefd0";
 
         /// <summary>
         /// 3k unicode value ("\ue966").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:3k
         /// </summary>
-        public const string 3k = "\ue966";
+        public const string ThreeK = "\ue966";
 
         /// <summary>
         /// 3k_plus unicode value ("\ue967").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:3k_plus
         /// </summary>
-        public const string 3kPlus = "\ue967";
+        public const string ThreeKPlus = "\ue967";
 
         /// <summary>
         /// 3mp unicode value ("\ue968").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:3mp
         /// </summary>
-        public const string 3mp = "\ue968";
+        public const string ThreeMegaPixels = "\ue968";
 
         /// <summary>
         /// 3p unicode value ("\uefd1").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:3p
         /// </summary>
-        public const string 3p = "\uefd1";
+        public const string ThirdPerson = "\uefd1";
 
         /// <summary>
         /// 4g_mobiledata unicode value ("\uefd2").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:4g_mobiledata
         /// </summary>
-        public const string 4gMobiledata = "\uefd2";
+        public const string FourGMobiledata = "\uefd2";
 
         /// <summary>
         /// 4g_plus_mobiledata unicode value ("\uefd3").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:4g_plus_mobiledata
         /// </summary>
-        public const string 4gPlusMobiledata = "\uefd3";
+        public const string FourGPlusMobiledata = "\uefd3";
 
         /// <summary>
         /// 4k unicode value ("\ue072").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:4k
         /// </summary>
-        public const string 4k = "\ue072";
+        public const string FourK = "\ue072";
 
         /// <summary>
         /// 4k_plus unicode value ("\ue969").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:4k_plus
         /// </summary>
-        public const string 4kPlus = "\ue969";
+        public const string FourKPlus = "\ue969";
 
         /// <summary>
         /// 4mp unicode value ("\ue96a").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:4mp
         /// </summary>
-        public const string 4mp = "\ue96a";
+        public const string FourMegaPixels = "\ue96a";
 
         /// <summary>
         /// 5g unicode value ("\uef38").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:5g
         /// </summary>
-        public const string 5g = "\uef38";
+        public const string FiveG = "\uef38";
 
         /// <summary>
         /// 5k unicode value ("\ue96b").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:5k
         /// </summary>
-        public const string 5k = "\ue96b";
+        public const string FiveK = "\ue96b";
 
         /// <summary>
         /// 5k_plus unicode value ("\ue96c").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:5k_plus
         /// </summary>
-        public const string 5kPlus = "\ue96c";
+        public const string FiveKPlus = "\ue96c";
 
         /// <summary>
         /// 5mp unicode value ("\ue96d").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:5mp
         /// </summary>
-        public const string 5mp = "\ue96d";
+        public const string FiveMegaPixels = "\ue96d";
 
         /// <summary>
         /// 60fps unicode value ("\uefd4").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:60fps
         /// </summary>
-        public const string 60fps = "\uefd4";
+        public const string SixtyFps = "\uefd4";
 
         /// <summary>
         /// 60fps_select unicode value ("\uefd5").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:60fps_select
         /// </summary>
-        public const string 60fpsSelect = "\uefd5";
+        public const string SixtyFpsSelect = "\uefd5";
 
         /// <summary>
         /// 6_ft_apart unicode value ("\uf21e").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:6_ft_apart
         /// </summary>
-        public const string 6FtApart = "\uf21e";
+        public const string SixFtApart = "\uf21e";
 
         /// <summary>
         /// 6k unicode value ("\ue96e").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:6k
         /// </summary>
-        public const string 6k = "\ue96e";
+        public const string SixK = "\ue96e";
 
         /// <summary>
         /// 6k_plus unicode value ("\ue96f").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:6k_plus
         /// </summary>
-        public const string 6kPlus = "\ue96f";
+        public const string SixKPlus = "\ue96f";
 
         /// <summary>
         /// 6mp unicode value ("\ue970").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:6mp
         /// </summary>
-        public const string 6mp = "\ue970";
+        public const string SixMegaPixels = "\ue970";
 
         /// <summary>
         /// 7k unicode value ("\ue971").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:7k
         /// </summary>
-        public const string 7k = "\ue971";
+        public const string SevenK = "\ue971";
 
         /// <summary>
         /// 7k_plus unicode value ("\ue972").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:7k_plus
         /// </summary>
-        public const string 7kPlus = "\ue972";
+        public const string SevenKPlus = "\ue972";
 
         /// <summary>
         /// 7mp unicode value ("\ue973").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:7mp
         /// </summary>
-        public const string 7mp = "\ue973";
+        public const string SevenMegaPixels = "\ue973";
 
         /// <summary>
         /// 8k unicode value ("\ue974").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:8k
         /// </summary>
-        public const string 8k = "\ue974";
+        public const string EightK = "\ue974";
 
         /// <summary>
         /// 8k_plus unicode value ("\ue975").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:8k_plus
         /// </summary>
-        public const string 8kPlus = "\ue975";
+        public const string EightKPlus = "\ue975";
 
         /// <summary>
         /// 8mp unicode value ("\ue976").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:8mp
         /// </summary>
-        public const string 8mp = "\ue976";
+        public const string EightMegaPixels = "\ue976";
 
         /// <summary>
         /// 9k unicode value ("\ue977").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:9k
         /// </summary>
-        public const string 9k = "\ue977";
+        public const string NineK = "\ue977";
 
         /// <summary>
         /// 9k_plus unicode value ("\ue978").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:9k_plus
         /// </summary>
-        public const string 9kPlus = "\ue978";
+        public const string NineKPlus = "\ue978";
 
         /// <summary>
         /// 9mp unicode value ("\ue979").
         /// <para/>
         /// See: https://fonts.google.com/icons?selected=Material+Icons:9mp
         /// </summary>
-        public const string 9mp = "\ue979";
+        public const string NineMegaPixels = "\ue979";
 
         /// <summary>
         /// ac_unit unicode value ("\ueb3b").
