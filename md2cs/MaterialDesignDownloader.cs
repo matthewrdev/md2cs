@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace md2cs
 {
-    public class MaterialDesignDownloader
+    public static class MaterialDesignDownloader
     {
-        public async Task<IReadOnlyList<MaterialDesignIcon>> DownloadIconCodes(string endpoint)
+        public static async Task<IReadOnlyList<MaterialDesignIcon>> DownloadIconCodes(string endpoint)
         {
             using (var client = new HttpClient())
             {
@@ -16,17 +16,12 @@ namespace md2cs
 
                 var content = await client.GetStringAsync(endpoint);
 
-                Dictionary<string, string> icons = content.Split('\n')
+                var icons = content.Split('\n')
                                                           .Where(c => !string.IsNullOrEmpty(c))
                                                           .Select(c => c.Split(' '))
                                                           .ToDictionary(c => c[0], c => c[1]);
                 
-                var result = new List<MaterialDesignIcon>();
-
-                foreach (var icon in icons)
-                {
-                    result.Add(new MaterialDesignIcon(icon.Key, icon.Value));
-                }
+                var result = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value)).ToList();
 
                 Console.WriteLine("Discovered " + result.Count + " icons from " + endpoint);
 

@@ -1,6 +1,6 @@
 ﻿        /// <summary>
-        /// $name$ unicode value ("\u$code$").
+        /// Unicode value for the '$name$' icon ("\u$code$").
         /// <para/>
-        /// See $link$
+        /// See: $link$
         /// </summary>
         public const string $dotnet_name$ = "\u$code$";
