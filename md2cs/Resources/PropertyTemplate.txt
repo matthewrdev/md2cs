@@ -1,5 +1,5 @@
 ﻿        /// <summary>
-        /// $name$ unicode value ("\u$code$").
+        /// Unicode value for the '$name$' icon ("\u$code$").
         /// <para/>
         /// See: $link$
         /// </summary>
