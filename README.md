@@ -32,7 +32,7 @@ It's super easy to use MaterialDesign To C#.
 
 Simply download [MaterialDesignIcons.cs](MaterialDesignIcons.cs) and place it into your project to start using it.
 
-**Ensure that you have added the Material Design font file into your projects!**
+**[Ensure that you have added the Material Design font file into your projects.](https://github.com/google/material-design-icons/tree/master/font)**
 
 You can use an icon in C# like:
 
