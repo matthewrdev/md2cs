@@ -2,7 +2,7 @@
 
 Material Design To C# creates a C# file that contains string constants for all Material Design icon codes.
 
-**[Get MaterialDesignIcons.cs here](MaterialDesignIcons.cs)**
+**[Get MaterialDesignIcons.cs here](https://raw.githubusercontent.com/matthewrdev/md2cs/master/MaterialDesignIcons.cs)**
 
 **[Download the Material Design Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)**
 
