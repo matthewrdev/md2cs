@@ -1,14 +1,6 @@
 # About
 
-Material Design To C# creates a C# file that contains string constants for all Material Design icon codes.
-
-**[Get MaterialDesignIcons.cs here](https://raw.githubusercontent.com/matthewrdev/md2cs/master/MaterialDesignIcons.cs)**
-
-**[Download the Material Design Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)**
-
-# Benefits
-
-Use MaterialDesign To C# to replace confusing and arcane unicode strings with a clean and descriptive property.
+Use `MaterialDesignIcons.cs` to replace confusing and arcane unicode strings with a clean and descriptive property.
 
 This:
 
@@ -25,6 +17,10 @@ submitButton.Text = MaterialDesignIcons.Build;
 ```
 
 The end result is cleaner, more readable and more maintainable code.
+
+**[Get MaterialDesignIcons.cs here](https://raw.githubusercontent.com/matthewrdev/md2cs/master/MaterialDesignIcons.cs)**
+
+**[Download the Material Design Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)**
 
 # Using Material Design To C#
 
