@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -9,7 +8,7 @@ namespace md2cs
 {
     public static class MaterialDesignDownloader
     {
-        public static async Task<IReadOnlyList<MaterialDesignIcon>> DownloadIconCodes(string endpoint)
+        public static async Task<IconDownloadResult> DownloadIconCodes(string endpoint)
         {
             using (var client = new HttpClient())
             {
@@ -18,8 +17,18 @@ namespace md2cs
                 var commentValue = new ProductInfoHeaderValue("(+https://github.com/matthewrdev/md2cs)");
                 client.DefaultRequestHeaders.UserAgent.Add(productValue);
                 client.DefaultRequestHeaders.UserAgent.Add(commentValue);
+
+                var result = new IconDownloadResult { IconUpdateDate = DateTimeOffset.Now };
                 
                 Console.WriteLine("Downloading: " + endpoint);
+                
+                // Get real modification date to make it easier to match up with font files
+                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://api.github.com/repos/google/material-design-icons/commits?path=font/&page=1&per_page=1"))
+                {
+                    var response = await client.SendAsync(request);
+                    if (response.Content.Headers.LastModified.HasValue)
+                        result.IconUpdateDate = response.Content.Headers.LastModified.Value;
+                }
 
                 var content = await client.GetStringAsync(endpoint);
 
@@ -28,9 +37,9 @@ namespace md2cs
                                                           .Select(c => c.Split(' '))
                                                           .ToDictionary(c => c[0], c => c[1]);
                 
-                var result = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value)).ToList();
+                result.Icons = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value)).ToList();
 
-                Console.WriteLine("Discovered " + result.Count + " icons from " + endpoint);
+                Console.WriteLine("Discovered " + result.Icons.Count + " icons from " + endpoint);
 
                 return result;
             }

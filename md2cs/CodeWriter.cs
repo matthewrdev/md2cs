@@ -7,7 +7,7 @@ namespace md2cs
 {
     public static class CodeWriter
     {
-        public static string Write(IEnumerable<MaterialDesignIcon> icons)
+        public static string Write(IEnumerable<MaterialDesignIcon> icons, DateTimeOffset updateDate)
         {
             Console.WriteLine("Generating C# code...");
 
@@ -22,7 +22,7 @@ namespace md2cs
             var separator = Environment.NewLine + Environment.NewLine;
             var code = string.Join(separator, properties);
 
-            return classTemplate.Replace("$properties$", code);
+            return classTemplate.Replace("$update_date$", updateDate.ToString("yyyy-MM-dd")).Replace("$properties$", code);
         }
     }
 }
