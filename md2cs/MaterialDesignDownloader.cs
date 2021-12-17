@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
 namespace md2cs
@@ -12,6 +13,12 @@ namespace md2cs
         {
             using (var client = new HttpClient())
             {
+                var assemblyName = typeof(MaterialDesignDownloader).Assembly.GetName();
+                var productValue = new ProductInfoHeaderValue(assemblyName.Name.ToUpper(), assemblyName.Version.ToString(3));
+                var commentValue = new ProductInfoHeaderValue("(+https://github.com/matthewrdev/md2cs)");
+                client.DefaultRequestHeaders.UserAgent.Add(productValue);
+                client.DefaultRequestHeaders.UserAgent.Add(commentValue);
+                
                 Console.WriteLine("Downloading: " + endpoint);
 
                 var content = await client.GetStringAsync(endpoint);
