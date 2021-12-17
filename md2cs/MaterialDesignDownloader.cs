@@ -3,6 +3,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
+using md2cs.Helpers;
 
 namespace md2cs
 {
@@ -23,11 +24,15 @@ namespace md2cs
                 Console.WriteLine("Downloading: " + endpoint);
                 
                 // Get real modification date to make it easier to match up with font files
-                using (var request = new HttpRequestMessage(new HttpMethod("GET"), "https://api.github.com/repos/google/material-design-icons/commits?path=font/&page=1&per_page=1"))
+                var requestUri = GitHubRequestHelper.GetCommitInfoRequestUri(endpoint);
+                if (requestUri != null)
                 {
-                    var response = await client.SendAsync(request);
-                    if (response.Content.Headers.LastModified.HasValue)
-                        result.IconUpdateDate = response.Content.Headers.LastModified.Value;
+                    using (var request = new HttpRequestMessage(new HttpMethod("GET"), requestUri))
+                    {
+                        var response = await client.SendAsync(request);
+                        if (response.Content.Headers.LastModified.HasValue)
+                            result.IconUpdateDate = response.Content.Headers.LastModified.Value;
+                    }
                 }
 
                 var content = await client.GetStringAsync(endpoint);
