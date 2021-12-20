@@ -27,8 +27,8 @@ namespace md2cs
 
             Directory.CreateDirectory(outputPath);
             
-            var icons = await MaterialDesignDownloader.DownloadIconCodes(Endpoint);
-            var code = CodeWriter.Write(icons);
+            var downloadResult = await MaterialDesignDownloader.DownloadIconCodes(Endpoint);
+            var code = CodeWriter.Write(downloadResult.Icons, downloadResult.IconUpdateDate);
             
             Console.WriteLine("Writing output file...");
             File.WriteAllText(Path.Combine(outputPath, "MaterialDesignIcons.cs"), code);
