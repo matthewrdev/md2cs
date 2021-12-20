@@ -40,7 +40,7 @@ namespace MaterialDesign
         /// <para/>
         /// <see href="https://fonts.google.com/icons?selected=Material+Icons:123"/>.
         /// </summary>
-        public const string OneHundred_And_TwentyThree = "\ueb8d";
+        public const string OneTwoThree = "\ueb8d";
 
         /// <summary>
         /// Unicode value for the '12mp' icon ("\ue954").

@@ -10,7 +10,8 @@ namespace md2cs.Helpers
         {
             { "3d_rotation", "Rotation3D" },
             { "360", "ThreeSixty"},
-            { "3p", "ThirdPerson"}
+            { "3p", "ThirdPerson"},
+            { "123", "OneTwoThree"}
         };
 
         private static readonly IReadOnlyDictionary<string, string> SuffixMap = new Dictionary<string, string>
