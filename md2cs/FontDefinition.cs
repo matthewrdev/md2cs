@@ -18,7 +18,7 @@
         /// <summary>
         /// A composite format string for the icon URL containing a parameter for the icon name. 
         /// </summary>
-        public string FontUrlFormat { get; set; }
+        public string IconUrlFormat { get; set; }
         
         /// <summary>
         /// The URL to the page for this font.

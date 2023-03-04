@@ -15,14 +15,14 @@ namespace md2cs
             {
                 FontName = "Material Icons",
                 CodePointsEndPoint = "https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints",
-                FontUrlFormat = "https://fonts.google.com/icons?selected=Material+Icons:{0}",
+                IconUrlFormat = "https://fonts.google.com/icons?selected=Material+Icons:{0}",
                 SourceUrl = "https://fonts.google.com/icons?selected=Material+Icons"
             },
             new FontDefinition
             {
                 FontName = "Material Symbols",
                 CodePointsEndPoint = "https://raw.githubusercontent.com/google/material-design-icons/master/variablefont/MaterialSymbolsOutlined%5BFILL%2CGRAD%2Copsz%2Cwght%5D.codepoints",
-                FontUrlFormat = "https://fonts.google.com/icons?selected=Material+Symbols+Outlined:{0}",
+                IconUrlFormat = "https://fonts.google.com/icons?selected=Material+Symbols+Outlined:{0}",
                 SourceUrl = "https://fonts.google.com/icons?selected=Material+Symbols"
             }
             // Define extra font versions here
