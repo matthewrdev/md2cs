@@ -12,7 +12,7 @@ namespace MaterialDesign
     /// Icons match the latest icon font from $update_date$.
     /// </remarks>
     /// </summary>
-    public static partial class MaterialDesignIcons
+    public static partial class $class_name$
     {
 $properties$
     }
