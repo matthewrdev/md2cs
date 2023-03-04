@@ -13,7 +13,7 @@ namespace md2cs
         {
             new FontDefinition
             {
-                FontName = "Material Design Icons",
+                FontName = "Material Icons",
                 CodePointsEndPoint = "https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints",
                 FontUrlFormat = "https://fonts.google.com/icons?selected=Material+Icons:{name}",
                 SourceUrl = "https://fonts.google.com/icons?selected=Material+Icons"
