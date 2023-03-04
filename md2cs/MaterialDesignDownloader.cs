@@ -45,7 +45,7 @@ namespace md2cs
                     .Select(c => c.Split(' '))
                     .ToDictionary(c => c[0], c => c[1]);
                 
-                result.Icons = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value, fontDefinition.FontUrlFormat.Replace("{name}", icon.Key))).ToList();
+                result.Icons = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value, string.Format(fontDefinition.FontUrlFormat, icon.Key))).ToList();
 
                 Console.WriteLine("Discovered " + result.Icons.Count + " icons from " + fontDefinition.CodePointsEndPoint);
 
