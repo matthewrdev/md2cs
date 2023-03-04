@@ -1,6 +1,6 @@
 # About
 
-Use `MaterialDesignIcons.cs` to replace confusing and arcane unicode strings with a clean and descriptive property.
+Use `MaterialSymbols.cs` (or `MaterialIcons.cs`) to replace confusing and arcane unicode strings with a clean and descriptive property.
 
 This:
 
@@ -12,36 +12,44 @@ submitButton.Text = "/ue869";
 Becomes this:
 
 ```
-// Obviously a build icon from MaterialDesign! 😊👍
-submitButton.Text = MaterialDesignIcons.Build;
+// Obviously a build icon from Material Symbols! 😊👍
+submitButton.Text = MaterialSymbols.Build;
 ```
 
 The end result is cleaner, more readable and more maintainable code.
-
-**[Get MaterialDesignIcons.cs here](https://raw.githubusercontent.com/matthewrdev/md2cs/master/MaterialDesignIcons.cs)**
-
-**[Download the Material Design Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)**
 
 # Using Material Design To C#
 
 It's super easy to use MaterialDesign To C#.
 
-Simply download [MaterialDesignIcons.cs](MaterialDesignIcons.cs) and place it into your project to start using it.
+Simply download the class for your desired Material Design icon set (see below), place it into your project and start using it.
 
-**[Ensure that you have added the Material Design font file into your projects.](https://github.com/google/material-design-icons/tree/master/font)**
+**You should also ensure that you have added the corresponding Material Design font file(s) into your projects.**
 
 You can use an icon in C# like:
 
 ```
-var fileIcon = MaterialDesignIcons.Build;
+var fileIcon = MaterialSymbols.Build;
 ```
 
 You can use an icon in XAML by:
 
- * Adding a namespace reference to `MaterialDesign`: `xmlns:md="clr-namespace:MaterialDesign"`;
- * Referencing a icon using `x:Static`: `<Label Text="{x:Static md:MaterialDesignIcons.Build}"/>`
+* Adding a namespace reference to `MaterialDesign`: `xmlns:md="clr-namespace:MaterialDesign"`;
+* Referencing a icon using `x:Static`: `<Label Text="{x:Static md:MaterialSymbols.Build}"/>`
 
 Voila! All done!
+
+# Downloads
+
+### Material Icons
+**[Get MaterialIcons.cs here](MaterialIcons.cs?raw=1)**
+
+**[Download the Material Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)**
+
+### Material Symbols (NEW)
+**[Get MaterialSymbols.cs here](MaterialSymbols.cs?raw=1)**
+
+**[Download the Material Symbols font assets here](https://github.com/google/material-design-icons/tree/master/variablefont)**
 
 # Using FontAwesome?
 
