@@ -3,7 +3,7 @@ using System;
 namespace MaterialDesign
 {
     /// <summary>
-    /// The unicode values for all Material Design icons.
+    /// The unicode codepoints for each glyph in Material Design Icons.
     /// <para/>
     /// <see href="https://fonts.google.com/icons?selected=Material+Icons"/>.
     /// <para/>

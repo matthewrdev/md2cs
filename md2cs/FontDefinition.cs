@@ -2,13 +2,10 @@
 {
     public class FontDefinition
     {
-        public FontDefinition(string fontName, string endPoint)
-        {
-            FontName = fontName;
-            EndPoint = endPoint;
-        }
-        
-        public string FontName { get; }
-        public string EndPoint { get; }
+        public string FontName { get; set; }
+        public string CodePointsEndPoint { get; set; }
+        public string FontUrlFormat { get; set; }
+        public string SourceUrl { get; set; }
+        public string ClassName => FontName?.Replace(" ", string.Empty);
     }
 }

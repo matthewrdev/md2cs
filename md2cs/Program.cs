@@ -11,7 +11,13 @@ namespace md2cs
     {
         private static readonly List<FontDefinition> FontDefinitions = new List<FontDefinition>
         {
-            new FontDefinition("MaterialDesignIcons", "https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints"),
+            new FontDefinition
+            {
+                FontName = "Material Design Icons",
+                CodePointsEndPoint = "https://raw.githubusercontent.com/google/material-design-icons/master/font/MaterialIcons-Regular.codepoints",
+                FontUrlFormat = "https://fonts.google.com/icons?selected=Material+Icons:{name}",
+                SourceUrl = "https://fonts.google.com/icons?selected=Material+Icons"
+            }
             // Define extra font versions here
         };
 
@@ -34,11 +40,11 @@ namespace md2cs
 
             foreach (var definition in FontDefinitions)
             {
-                var downloadResult = await MaterialDesignDownloader.DownloadIconCodes(definition.EndPoint);
-                var code = CodeWriter.Write(definition.FontName, downloadResult.Icons, downloadResult.IconUpdateDate);
+                var downloadResult = await MaterialDesignDownloader.DownloadIconCodes(definition);
+                var code = CodeWriter.Write(definition, downloadResult.Icons, downloadResult.IconUpdateDate);
             
                 Console.WriteLine($"Writing output file for '{definition.FontName}'...");
-                File.WriteAllText(Path.Combine(outputPath, $"{definition.FontName}.cs"), code);
+                File.WriteAllText(Path.Combine(outputPath, $"{definition.ClassName}.cs"), code);
             }
 
             Console.WriteLine("Opening output directory...");

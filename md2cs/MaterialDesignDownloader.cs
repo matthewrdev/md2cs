@@ -9,7 +9,7 @@ namespace md2cs
 {
     public static class MaterialDesignDownloader
     {
-        public static async Task<IconDownloadResult> DownloadIconCodes(string endpoint)
+        public static async Task<IconDownloadResult> DownloadIconCodes(FontDefinition fontDefinition)
         {
             using (var client = new HttpClient())
             {
@@ -21,10 +21,10 @@ namespace md2cs
 
                 var result = new IconDownloadResult { IconUpdateDate = DateTimeOffset.Now };
                 
-                Console.WriteLine("Downloading: " + endpoint);
+                Console.WriteLine("Downloading: " + fontDefinition.CodePointsEndPoint);
                 
                 // Get real modification date to make it easier to match up with font files
-                var requestUri = GitHubRequestHelper.GetCommitInfoRequestUri(endpoint);
+                var requestUri = GitHubRequestHelper.GetCommitInfoRequestUri(fontDefinition.CodePointsEndPoint);
                 if (requestUri != null)
                 {
                     using (var request = new HttpRequestMessage(new HttpMethod("GET"), requestUri))
@@ -35,7 +35,7 @@ namespace md2cs
                     }
                 }
 
-                var content = await client.GetStringAsync(endpoint);
+                var content = await client.GetStringAsync(fontDefinition.CodePointsEndPoint);
 
                 var icons = content.Split('\n')
                     // ReSharper disable once CommentTypo
@@ -45,9 +45,9 @@ namespace md2cs
                     .Select(c => c.Split(' '))
                     .ToDictionary(c => c[0], c => c[1]);
                 
-                result.Icons = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value)).ToList();
+                result.Icons = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value, fontDefinition.FontUrlFormat.Replace("{name}", icon.Key))).ToList();
 
-                Console.WriteLine("Discovered " + result.Icons.Count + " icons from " + endpoint);
+                Console.WriteLine("Discovered " + result.Icons.Count + " icons from " + fontDefinition.CodePointsEndPoint);
 
                 return result;
             }
