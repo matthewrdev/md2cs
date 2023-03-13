@@ -38,9 +38,12 @@ namespace md2cs
                 var content = await client.GetStringAsync(endpoint);
 
                 var icons = content.Split('\n')
-                                                          .Where(c => !string.IsNullOrEmpty(c))
-                                                          .Select(c => c.Split(' '))
-                                                          .ToDictionary(c => c[0], c => c[1]);
+                    // ReSharper disable once CommentTypo
+                    // Excluding "flourescent" (sic) as workaround for issue in MD font (https://github.com/google/material-design-icons/issues/1404)
+                    // ReSharper disable once StringLiteralTypo
+                    .Where(c => !string.IsNullOrEmpty(c) && !c.Contains("flourescent"))
+                    .Select(c => c.Split(' '))
+                    .ToDictionary(c => c[0], c => c[1]);
                 
                 result.Icons = icons.Select(icon => new MaterialDesignIcon(icon.Key, icon.Value)).ToList();
 
