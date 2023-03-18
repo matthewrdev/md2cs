@@ -26,7 +26,7 @@ Simply download the class for your desired Material Design icon set (see below),
 
 **You should also ensure that you have added the corresponding Material Design font file(s) into your projects.**
 
-You can use an icon in C# like:
+You can use an icon in C# like so:
 
 ```
 var fileIcon = MaterialSymbols.Build;
