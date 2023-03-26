@@ -3,7 +3,7 @@ using System;
 namespace MaterialDesign
 {
     /// <summary>
-    /// The unicode values for all Material Design icons.
+    /// The unicode codepoints for each glyph in Material Icons.
     /// <para/>
     /// <see href="https://fonts.google.com/icons?selected=Material+Icons"/>.
     /// <para/>
@@ -12,7 +12,7 @@ namespace MaterialDesign
     /// Icons match the latest icon font from 2022-09-19.
     /// </remarks>
     /// </summary>
-    public static partial class MaterialDesignIcons
+    public static partial class MaterialIcons
     {
         /// <summary>
         /// Unicode value for the '10k' icon ("\ue951").

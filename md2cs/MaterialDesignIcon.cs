@@ -6,12 +6,12 @@ namespace md2cs
     [DebuggerDisplay("{Name} - {DotNetName}")]
     public class MaterialDesignIcon
     {
-        public MaterialDesignIcon(string name, string codepoint)
+        public MaterialDesignIcon(string name, string codepoint, string url)
         {
             Name = name;
             DotNetName = DotNetNameHelper.ToDotNetName(Name);
             Unicode = codepoint;
-            Url = "https://fonts.google.com/icons?selected=Material+Icons:" + name;
+            Url = url;
         }
 
         public string Name { get; }

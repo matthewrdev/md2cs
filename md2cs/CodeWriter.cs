@@ -7,7 +7,7 @@ namespace md2cs
 {
     public static class CodeWriter
     {
-        public static string Write(IEnumerable<MaterialDesignIcon> icons, DateTimeOffset updateDate)
+        public static string Write(FontDefinition fontDefinition, IEnumerable<MaterialDesignIcon> icons, DateTimeOffset updateDate)
         {
             Console.WriteLine("Generating C# code...");
 
@@ -22,7 +22,12 @@ namespace md2cs
             var separator = Environment.NewLine + Environment.NewLine;
             var code = string.Join(separator, properties);
 
-            return classTemplate.Replace("$update_date$", updateDate.ToString("yyyy-MM-dd")).Replace("$properties$", code);
+            return classTemplate
+                .Replace("$class_name$", fontDefinition.ClassName)
+                .Replace("$font_name$", fontDefinition.FontName)
+                .Replace("$url$", fontDefinition.SourceUrl)
+                .Replace("$update_date$", updateDate.ToString("yyyy-MM-dd"))
+                .Replace("$properties$", code);
         }
     }
 }

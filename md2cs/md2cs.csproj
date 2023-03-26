@@ -28,6 +28,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FontDefinition.cs" />
     <Compile Include="Helpers\GitHubRequestHelper.cs" />
     <Compile Include="IconDownloadResult.cs" />
     <Compile Include="Program.cs" />
