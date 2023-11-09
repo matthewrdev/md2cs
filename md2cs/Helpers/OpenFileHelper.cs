@@ -1,26 +1,37 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.InteropServices;
 
 namespace md2cs.Helpers
 {
     public static class OpenFileHelper
     {
-        public static bool IsWindows => !(Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX);
+        public static bool IsWindows() =>
+            RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
 
-        public static bool IsLinux => false;
+        public static bool IsMacOS() =>
+            RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
 
-        public static bool IsOsx => Environment.OSVersion.Platform == PlatformID.Unix || Environment.OSVersion.Platform == PlatformID.MacOSX;
+        public static bool IsLinux() =>
+            RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
 
         public static bool OpenAndSelect(string path)
         {
-            if (IsOsx)
+            if (IsMacOS())
             {
                 OpenAndSelectMac(path);
                 return true;
             }
-            else if (IsWindows)
+
+            if (IsWindows())
             {
                 OpenAndSelectWindows(path);
+                return true;
+            }
+
+            if (IsLinux())
+            {
+                OpenLinux(path);
                 return true;
             }
 
@@ -29,14 +40,13 @@ namespace md2cs.Helpers
 
         public static void OpenAndSelectMac(string path)
         {
-            var openInsidesOfFolder = false;
+            var openInsideDirectory = false;
 
-            // try mac
-            var macPath = path.Replace("\\", "/"); // mac finder doesn't like backward slashes
+            var macPath = path.Replace("\\", "/"); // Mac finder doesn't like backward slashes
 
-            if (Directory.Exists(macPath)) // if path requested is a folder, automatically open insides of that folder
+            if (Directory.Exists(macPath)) // if path requested is a directory, automatically open inside that directory
             {
-                openInsidesOfFolder = true;
+                openInsideDirectory = true;
             }
 
             if (!macPath.StartsWith("\""))
@@ -45,9 +55,9 @@ namespace md2cs.Helpers
             }
             if (!macPath.EndsWith("\""))
             {
-                macPath = macPath + "\"";
+                macPath += "\"";
             }
-            var arguments = (openInsidesOfFolder ? "" : "-R ") + macPath;
+            var arguments = (openInsideDirectory ? "" : "-R ") + macPath;
             //Debug.Log("arguments: " + arguments);
             try
             {
@@ -57,33 +67,42 @@ namespace md2cs.Helpers
             {
                 // tried to open mac finder in windows
                 // just silently skip error
-                // we currently have no platform define for the current OS we are in, so we resort to this
                 e.HelpLink = ""; // do anything with this variable to silence warning about not using it
             }
         }
 
         public static void OpenAndSelectWindows(string path)
         {
-            var openInsidesOfFolder = false;
+            var openInsideDirectory = false;
 
-            // try windows
-            var winPath = path.Replace("/", "\\"); // windows explorer doesn't like forward slashes
+            var winPath = path.Replace("/", "\\"); // Windows explorer doesn't like forward slashes
 
-            if (Directory.Exists(winPath)) // if path requested is a folder, automatically open insides of that folder
+            if (Directory.Exists(winPath)) // if path requested is a directory, automatically open inside that directory
             {
-                openInsidesOfFolder = true;
+                openInsideDirectory = true;
             }
             try
             {
-                System.Diagnostics.Process.Start("explorer.exe", (openInsidesOfFolder ? "/root," : "/select,") + winPath);
+                System.Diagnostics.Process.Start("explorer.exe", (openInsideDirectory ? "/root," : "/select,") + winPath);
             }
             catch (System.ComponentModel.Win32Exception e)
             {
                 // tried to open win explorer in mac
                 // just silently skip error
-                // we currently have no platform define for the current OS we are in, so we resort to this
                 e.HelpLink = ""; // do anything with this variable to silence warning about not using it
             }
+        }
+
+        public static void OpenLinux(string path)
+        {
+            var linuxPath = path.Replace("\\", "/"); // Linux doesn't like backward slashes in paths
+            
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = linuxPath,
+                UseShellExecute = true,
+                Verb = "open"
+            });
         }
     }
 }
