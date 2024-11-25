@@ -41,15 +41,21 @@ Voila! All done!
 
 # Downloads
 
+
+
+### Material Symbols
+
+ * [Get MaterialSymbols.cs here](MaterialSymbols.cs?raw=1)
+ * [Download the Material Symbols font assets here](https://github.com/google/material-design-icons/tree/master/variablefont)
+ * [Explore Material Symbols here.](https://fonts.google.com/icons)
+
+
 ### Material Icons
-**[Get MaterialIcons.cs here](MaterialIcons.cs?raw=1)**
 
-**[Download the Material Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)**
+ * [Get MaterialIcons.cs here](MaterialIcons.cs?raw=1)
+ * [Download the Material Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)
+ * [Explore Material Icons here.](https://fonts.google.com/icons?icon.set=Material+Icons)
 
-### Material Symbols (NEW)
-**[Get MaterialSymbols.cs here](MaterialSymbols.cs?raw=1)**
-
-**[Download the Material Symbols font assets here](https://github.com/google/material-design-icons/tree/master/variablefont)**
 
 # Using FontAwesome?
 
