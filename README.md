@@ -50,7 +50,7 @@ Voila! All done!
  * [Explore Material Symbols here.](https://fonts.google.com/icons)
 
 
-### Material Icons
+### Material Icons (Deprecated — No longer updated by Google)
 
  * [Get MaterialIcons.cs here](MaterialIcons.cs?raw=1)
  * [Download the Material Icon font assets here](https://github.com/google/material-design-icons/tree/master/font)
