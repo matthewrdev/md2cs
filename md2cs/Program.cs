@@ -31,19 +31,16 @@ namespace md2cs
         public static async Task Main(string[] args)
         {
             var exportPath = AssemblyHelper.EntryAssemblyDirectory;
+            
+            
+            exportPath = Path.Combine(exportPath, "../../../");
+            exportPath = Path.GetFullPath(exportPath);
+            
             if (args != null && args.Any())
             {
                 exportPath = args.First();
             }
 
-            var outputPath = Path.Combine(exportPath, "md2cs-output");
-
-            if (Directory.Exists(outputPath))
-            {
-                Directory.Delete(outputPath, true);
-            }
-
-            Directory.CreateDirectory(outputPath);
 
             foreach (var definition in FontDefinitions)
             {
@@ -51,11 +48,11 @@ namespace md2cs
                 var code = CodeWriter.Write(definition, downloadResult.Icons, downloadResult.IconUpdateDate);
             
                 Console.WriteLine($"Writing output file for '{definition.FontName}'...");
-                File.WriteAllText(Path.Combine(outputPath, $"{definition.ClassName}.cs"), code);
+                File.WriteAllText(Path.Combine(exportPath, $"{definition.ClassName}.cs"), code);
             }
 
             Console.WriteLine("Opening output directory...");
-            OpenFileHelper.OpenAndSelect(outputPath);
+            OpenFileHelper.OpenAndSelect(exportPath);
         }
     }
 }
