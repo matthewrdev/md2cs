@@ -352,3 +352,6 @@ MigrationBackup/
 
 # Rider Working Folder
 .idea/
+
+# macOS Finder Files
+*.DS_STORE
